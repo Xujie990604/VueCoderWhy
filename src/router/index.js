@@ -4,10 +4,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: () => import("../views/HomePage.vue")
-  // }, 
+  {
+    path: '/',
+    component: () => import("../views/HomePage.vue")
+  }, 
   {
     path: '/test',
     name: 'test',

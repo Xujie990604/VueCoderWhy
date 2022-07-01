@@ -1,6 +1,6 @@
 <template>
   <div>
-    app
+    app页面
     <router-view/>
   </div>
 </template>
@@ -24,3 +24,5 @@ export default {
 
 
 </style>
+
+
