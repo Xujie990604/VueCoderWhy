@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    xujie 
+  <div>
+    app页面
+    <router-view/>
   </div>
 </template>
 
@@ -20,3 +21,5 @@ export default {
 
 <style>
 </style>
+
+
