@@ -7,22 +7,19 @@
 
 <script>
 export default {
-  name: 'App',
+  name: 'APP',
   data() {
     return {
-      isShow: false
+      
     }
   },
   created() {
-  },
-  methods: {
+    console.log(this.axios)
   }
 }
 </script>
 
 <style>
-
-
 </style>
 
 
