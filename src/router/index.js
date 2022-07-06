@@ -17,7 +17,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.BASE_URL, // 应用的基路径 使用BASE_URL变量,等价配置文件中的publicPath值
   routes
 })
 
