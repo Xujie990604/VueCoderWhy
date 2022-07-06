@@ -21,8 +21,9 @@ const i18n = new vueI18n({
   }
 })
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 
+Vue.prototype.$axios = axios
 
 Vue.prototype.$axios = axios;
 

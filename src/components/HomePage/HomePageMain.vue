@@ -28,7 +28,8 @@ export default {
             this.$i18n.locale = "zh";
         }
     }
-}
+  }
+
 </script>
 
 <style scoped>

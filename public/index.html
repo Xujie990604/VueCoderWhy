@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 使用BASE_URL变量,等价配置文件中的publicPath值。默认值为"/" -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 在index.html文件中引入资源时，最好使用BASE_URL系统变量。 -->
+    <!-- 使用相对路径时，如果路由超过两层。会导致加载不到正确的文件 （netWork控制台查看） -->
+    <link rel="stylesheet" href="<%= BASE_URL %>css/normal.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>

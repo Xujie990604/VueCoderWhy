@@ -7,19 +7,20 @@
 </template>
 
 <script>
-export default {  name: 'APP',
-  data() {
+export default {
+  name: 'APP',
+  data () {
     return {
-      
+
     }
   },
-  created() {
-
+  created () {
+    console.log(this.axios)
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+$color: red;
+
 </style>
-
-

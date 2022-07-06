@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import HomePageMain from '@/components/HomePage/HomePageMain.vue'
+// import HomePageMain from '@/components/HomePage/HomePageMain.vue';
 export default {
     name: 'HomePage',
     components: {
@@ -20,6 +20,9 @@ export default {
     methods: {
         
     }
+  },
+  methods: {
+  }
 }
 </script>
 
