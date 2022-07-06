@@ -13,22 +13,14 @@ export default {
     };
   },
   created() {
+    let arr = [1,2,3]
     console.log("created 1")
-    this.start().then(res => {
-    })
-    console.log("created 2")
-    setTimeout(() => {
-      console.log('setTimeout')
-    });
-    console.log('before setTimeout')
+    this.start();
+    console.log("created 2");
   },
   methods: {
     start() {
-      return new Promise(resolve => {
-        console.log("start 1");
-        resolve("start data");
-        console.log("start 2");
-      })
+     console.log('start')
     }
   },
 };

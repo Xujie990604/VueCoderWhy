@@ -14,7 +14,6 @@ export default {  name: 'APP',
     }
   },
   created() {
-    console.log(this.axios)
 
   }
 }
