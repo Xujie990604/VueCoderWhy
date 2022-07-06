@@ -6,20 +6,20 @@
 
 <script>
 export default {
-    name: 'HomePageMain',
-    data() {
-        return {
-            
-        }
-    },
-    props: {
-        name: {
-            default: 'Vue',
-            type: String
-        }
-    },
-    methods: {
+  name: 'HomePageMain',
+  data () {
+    return {
+
     }
+  },
+  props: {
+    name: {
+      default: 'Vue',
+      type: String
+    }
+  },
+  methods: {
+  }
 }
 </script>
 

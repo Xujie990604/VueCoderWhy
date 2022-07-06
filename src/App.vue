@@ -8,12 +8,12 @@
 <script>
 export default {
   name: 'APP',
-  data() {
+  data () {
     return {
-      
+
     }
   },
-  created() {
+  created () {
     console.log(this.axios)
   }
 }
@@ -21,8 +21,5 @@ export default {
 
 <style lang="scss">
 $color: red;
-</style>>
 
 </style>
-
-
