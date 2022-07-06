@@ -15,7 +15,6 @@ export default {
   created() {
     console.log("created 1")
     this.start().then(res => {
-      使用网络请求
     })
     console.log("created 2")
     setTimeout(() => {
