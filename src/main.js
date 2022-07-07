@@ -6,7 +6,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 
-// 引入Vuei18n国际化插件 和 自定义的中文，英文变量信息
+// 引入Vue-i18n国际化插件 和 自定义的中文，英文变量信息
 import VueI18n from 'vue-i18n'
 import zhLocale from './Lang/zh'
 import enLocale from './Lang/en'

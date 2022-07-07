@@ -1,3 +1,10 @@
+/*
+ * @Author: your Name
+ * @Date: 2022-07-06 17:22:35
+ * @LastEditors: your Name
+ * @LastEditTime: 2022-07-07 19:41:20
+ * @Description: 
+ */
 module.exports = {
   root: true,
   env: {
@@ -19,3 +26,4 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'] // 函数名和（）之间有空格会报错
   }
 }
+/
