@@ -10,12 +10,12 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    changeName (state, name) {
+    changeName(state, name) {
       state.name = name
     }
   },
   actions: {
-    aChangeName ({ commit }, name) {
+    aChangeName({ commit }, name) {
       setTimeout(() => {
         commit('changeName', name)
       }, 1000)

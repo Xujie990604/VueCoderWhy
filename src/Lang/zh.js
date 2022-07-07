@@ -1,7 +1,7 @@
 export default {
-    language: 'English',
-    normal: {
-        confirm: 'OK',
-        cancel: 'cancel'
-    }
+  language: 'English',
+  normal: {
+    confirm: 'OK',
+    cancel: 'cancel'
+  }
 }
