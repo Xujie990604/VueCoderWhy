@@ -7,21 +7,15 @@
 </template>
 
 <script>
-// import HomePageMain from '@/components/HomePage/HomePageMain.vue';
+import HomePageMain from '@/components/HomePage/HomePageMain.vue'
 export default {
-    name: 'HomePage',
-    components: {
-        HomePageMain
-    },
-    data() {
-        return {
-        }
-    },
-    methods: {
-        
-    }
+  name: 'HomePage',
+  components: {
+    HomePageMain
   },
-  methods: {
+  data () {
+    return {
+    }
   }
 }
 </script>
