@@ -9,10 +9,13 @@ module.exports = {
     '@vue/standard'
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser'
+    parser: '@babel/eslint-parser' // 指定哪个插件作为Eslint的解析器
   },
+  // error: 报错 warn: 警告 off: 关闭
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    semi: ['warn', 'never'], // 句尾使用分号会警告
+    'space-before-function-paren': ['error', 'never'] // 函数名和（）之间有空格会报错
   }
 }
