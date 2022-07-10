@@ -2,8 +2,8 @@
  * @Author: your Name
  * @Date: 2022-07-06 17:22:35
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-07 21:06:40
- * @Description: 
+ * @LastEditTime: 2022-07-10 15:49:22
+ * @Description: Eslint插件的配置文件
  */
 module.exports = {
   root: true,
@@ -22,8 +22,9 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    semi: ['warn', 'never'], // 句尾使用分号会警告
-    'space-before-function-paren': ['error', 'never'] // 函数名和（）之间有空格会报错
+    semi: 'off', // 不检查分号
+    'space-before-function-paren': ['error', 'never'], // 函数名和（）之间有空格会报错
+    'no-tabs': 'off', // 不检查制表符
+    quotes: 'off' // 不检查单,双引号
   }
 }
-/
