@@ -1,16 +1,17 @@
 <!--
  * @Author: x09898 coder_xujie@163.com
  * @Date: 2022-06-16 17:27:06
- * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-07 21:07:59
- * @FilePath: \supermarket\src\views\TestView.vue
- * @Description: 
- * 
- * Copyright (c) 2022 by x09898 coder_xujie@163.com, All Rights Reserved. 
+ * @LastEditors: x09898 coder_xujie@163.com
+ * @LastEditTime: 2022-07-08 10:26:11
+ * @FilePath: \VueCoderWhy\src\views\TestView.vue
+ * @Description: 专门用来测试的页面
 -->
+
 <template>
   <div class="test-view">
-    <div :id="name"></div>
+    <ul>
+      <li v-for="(item,index) of arr" :key="index">{{ item }}</li>
+    </ul>
   </div>
 </template>
 <script>
@@ -19,24 +20,16 @@ export default {
   data() {
     return {
       name: 'app',
-      isTrue: true
+      isTrue: true,
+      arr: ['1', '2', '3']
     }
   },
   beforeCreate() {
-  }, 
+  },
   created() {
     window.data = this
   },
-  methods: {
-    /**
-     * @description: 
-     * @param {*} a
-     * @param {*} b
-     * @return {*}
-     */    
-    add(a, b) {
-      return a + b;
-    }
+  computed: {
   }
 }
 </script>
