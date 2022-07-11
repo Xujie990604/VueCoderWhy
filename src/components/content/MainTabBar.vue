@@ -2,20 +2,26 @@
 <!--
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:03:15
- * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-10 23:17:03
- * @FilePath: \supermarket\src\components\content\MainTabBar.vue
+ * @LastEditors: x09898 coder_xujie@163.com
+ * @LastEditTime: 2022-07-11 17:25:04
+ * @FilePath: \VueCoderWhy\src\components\content\MainTabBar.vue
  * @Description: 底部的导航栏组件
 -->
 <template>
   <div class="main-tab-bar">
-    <el-tabs v-model="activeName" @tab-click="handleClick">
+    <el-tabs v-model="activeName" type="border-card" @tab-click="handleClick">
       <el-tab-pane name="home">
-        <span slot="label"><i class="el-icon-date">首页</i></span>
+        <span slot="label"><i class="el-icon-s-home">首页</i></span>
       </el-tab-pane>
-      <el-tab-pane label="分类" name="category"></el-tab-pane>
-      <el-tab-pane label="购物车" name="cart"></el-tab-pane>
-      <el-tab-pane label="我的" name="profile"></el-tab-pane>
+      <el-tab-pane label="分类" name="category">
+        <span slot="label"><i class="el-icon-menu">分类</i></span>
+      </el-tab-pane>
+      <el-tab-pane label="购物车" name="cart">
+        <span slot="label"><i class="el-icon-s-goods">购物车</i></span>
+      </el-tab-pane>
+      <el-tab-pane label="我的" name="profile">
+        <span slot="label"><i class="el-icon-user">我的</i></span>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
