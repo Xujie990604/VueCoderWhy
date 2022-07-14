@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:24:59
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-14 20:57:19
+ * @LastEditTime: 2022-07-14 21:00:03
  * @FilePath: \supermarket\src\views\homePage\HomePage.vue
  * @Description: home视图组件
 -->
@@ -17,7 +17,6 @@ export default {
   name: 'HomePage',
   data() {
     return {
-      lists: ['a', 'd']
     }
   }
 }

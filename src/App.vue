@@ -1,16 +1,16 @@
 <!--
  * @Author: x09898 coder_xujie@163.com
  * @Date: 2022-06-10 10:50:31
- * @LastEditors: x09898 coder_xujie@163.com
- * @LastEditTime: 2022-07-13 14:46:06
- * @FilePath: \VueCoderWhy\src\App.vue
+ * @LastEditors: xujie 1607526161@qq.com
+ * @LastEditTime: 2022-07-14 21:00:19
+ * @FilePath: \supermarket\src\App.vue
  * @Description: App页面
 -->
 
 <template>
   <div>
     <router-view/>
-    <main-tab-bar test-name="appName" ></main-tab-bar>
+    <main-tab-bar></main-tab-bar>
   </div>
 </template>
 
