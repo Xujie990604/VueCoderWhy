@@ -3,7 +3,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:03:15
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-12 20:11:05
+ * @LastEditTime: 2022-07-14 20:57:12
  * @FilePath: \supermarket\src\components\content\MainTabBar.vue
  * @Description: 底部的导航栏组件
 -->
@@ -23,12 +23,18 @@
         <span slot="label"><i class="el-icon-user">我的</i></span>
       </el-tab-pane>
     </el-tabs>
+    <test-view v-bind="$attrs"></test-view>
   </div>
 </template>
 
 <script>
+import TestView from '../../views/TestView.vue'
 export default {
   name: 'MainTabBar',
+  inheritAttrs: false,
+  components: {
+    TestView
+  },
   data() {
     return {
       activeName: 'home' // 默认活跃标签的name
@@ -62,5 +68,9 @@ export default {
       }
     }
   }
+}
+
+.test-view {
+  font-size: 30px;
 }
 </style>

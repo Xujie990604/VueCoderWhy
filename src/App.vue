@@ -2,7 +2,7 @@
  * @Author: x09898 coder_xujie@163.com
  * @Date: 2022-06-10 10:50:31
  * @LastEditors: x09898 coder_xujie@163.com
- * @LastEditTime: 2022-07-11 17:26:34
+ * @LastEditTime: 2022-07-13 14:46:06
  * @FilePath: \VueCoderWhy\src\App.vue
  * @Description: App页面
 -->
@@ -10,7 +10,7 @@
 <template>
   <div>
     <router-view/>
-    <main-tab-bar></main-tab-bar>
+    <main-tab-bar test-name="appName" ></main-tab-bar>
   </div>
 </template>
 
@@ -29,10 +29,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// 引入base.css
+<style>
+/* 引入base.css */
 @import 'assets/css/base.css';
+</style>
 
+<style lang="scss" scoped>
 .main-tab-bar {
   position: fixed;
   bottom: 0;
