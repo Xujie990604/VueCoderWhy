@@ -1,8 +1,8 @@
 /*
  * @Author: your Name
  * @Date: 2022-07-06 17:22:35
- * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-12 20:30:42
+ * @LastEditors: x09898 coder_xujie@163.com
+ * @LastEditTime: 2022-07-15 11:57:54
  * @Description: Eslint插件的配置文件
  */
 module.exports = {
