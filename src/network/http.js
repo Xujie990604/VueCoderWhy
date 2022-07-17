@@ -1,9 +1,17 @@
+/*
+ * @Author: xujie 1607526161@qq.com
+ * @Date: 2022-07-12 21:08:50
+ * @LastEditors: xujie 1607526161@qq.com
+ * @LastEditTime: 2022-07-17 17:35:02
+ * @FilePath: \supermarket\src\network\http.js
+ * @Description: 封装axios的文件
+ */
 import axios from 'axios';
 
 export default function(config) {
     // 1.创建axios的实例
     const http = axios.create({
-        baseURL: 'https://jsonplaceholder.typicode.com',
+        baseURL: 'http://152.136.185.210:8000/api/w6',
         timeout: 5000
     })
 
