@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:24:59
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-21 22:16:18
+ * @LastEditTime: 2022-07-21 22:28:09
  * @FilePath: \supermarket\src\views\homePage\HomePage.vue
  * @Description: home视图组件
 -->
@@ -15,7 +15,7 @@
 
 <script>
 import NavBar from 'components/common/navBar/NavBar.vue'
-import { getHomeMultidata } from 'network/homePage/httpHomePage'
+import { getHomeMultidata } from 'network/homePage/HttpHomePage'
 export default {
   components: { NavBar },
   name: 'HomePage',
