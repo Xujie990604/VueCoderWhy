@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-12 20:26:58
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-12 20:53:43
+ * @LastEditTime: 2022-07-21 21:49:35
  * @FilePath: \supermarket\src\components\common\navBar\NavBar.vue
  * @Description: 顶部导航栏, 内部有三个插槽
 -->
@@ -23,10 +23,10 @@
 <script>
 export default {
   name: 'NavBar',
-	data() {
-		return {
-		}
-	}
+  data() {
+    return {
+    }
+  }
 }
 </script>
 

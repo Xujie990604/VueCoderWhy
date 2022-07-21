@@ -1,8 +1,8 @@
 /*
  * @Author: your Name
  * @Date: 2022-07-06 17:22:35
- * @LastEditors: x09898 coder_xujie@163.com
- * @LastEditTime: 2022-07-15 11:57:54
+ * @LastEditors: xujie 1607526161@qq.com
+ * @LastEditTime: 2022-07-21 21:47:45
  * @Description: Eslint插件的配置文件
  */
 module.exports = {
@@ -22,11 +22,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    semi: 'off', // 不检查分号
     'space-before-function-paren': ['error', 'never'], // 函数名和（）之间有空格会报错
-    'no-tabs': 'off', // 不检查制表符
-    quotes: 'off', // 不检查单,双引号
-    indent: 'off', // 不检查缩进
-    'comma-dangle': 'off', // 不检查是否尾随逗号
+    'no-tabs': 'off' // 不检查制表符
   }
 }

@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:24:59
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-17 17:39:59
+ * @LastEditTime: 2022-07-21 22:16:18
  * @FilePath: \supermarket\src\views\homePage\HomePage.vue
  * @Description: home视图组件
 -->
@@ -21,12 +21,16 @@ export default {
   name: 'HomePage',
   data() {
     return {
+      banner: [], // 轮播图的数据
+      recommend: [] // 推荐的数据
     }
   },
   created() {
     // 获取页面的所有数据
     getHomeMultidata().then(res => {
-      console.log(res)
+      console.log('Home页面请求到的所有数据', res.data)
+      this.banner = res.data.banner.list
+      this.recommend = res.data.recommend.list
     })
   }
 }

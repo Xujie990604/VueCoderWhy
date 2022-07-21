@@ -1,9 +1,9 @@
 <!--
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:26:50
- * @LastEditors: x09898 coder_xujie@163.com
- * @LastEditTime: 2022-07-15 17:56:29
- * @FilePath: \VueCoderWhy\src\views\category\CateGory.vue
+ * @LastEditors: xujie 1607526161@qq.com
+ * @LastEditTime: 2022-07-21 21:48:45
+ * @FilePath: \supermarket\src\views\category\CateGory.vue
  * @Description: 分类视图组件
 -->
 <template>
@@ -18,6 +18,6 @@ export default {
   data() {
     return {
     }
-  },
+  }
 }
 </script>
