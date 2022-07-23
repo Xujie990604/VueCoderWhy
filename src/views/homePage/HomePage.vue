@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:24:59
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-23 12:19:42
+ * @LastEditTime: 2022-07-23 12:32:50
  * @FilePath: \supermarket\src\views\homePage\HomePage.vue
  * @Description: home视图组件
 -->
@@ -28,7 +28,7 @@ export default {
   created() {
     // 获取页面的所有数据
     // p156 11:33
-    // add
+    // d
     getHomeMultidata().then(res => {
       console.log('Home页面请求到的所有数据', res.data)
       this.banner = res.data.banner.list
