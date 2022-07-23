@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:24:59
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-23 12:16:32
+ * @LastEditTime: 2022-07-23 12:42:29
  * @FilePath: \supermarket\src\views\homePage\HomePage.vue
  * @Description: home视图组件
 -->
