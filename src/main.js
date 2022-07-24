@@ -1,3 +1,10 @@
+/*
+ * @Author: xujie 1607526161@qq.com
+ * @Date: 2022-05-24 21:45:38
+ * @LastEditors: xujie 1607526161@qq.com
+ * @FilePath: \supermarket\src\main.js
+ * @Description: 入口文件
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
