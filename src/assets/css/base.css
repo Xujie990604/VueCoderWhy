@@ -2,12 +2,13 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 01:41:34
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-24 15:07:24
+ * @LastEditTime: 2022-07-26 21:58:31
  * @FilePath: \supermarket\src\assets\css\base.css
  * @Description: 自己定义的一些CSS属性
  */
 
 @import './normalize.css';
+@import './app.css';
 
 :root {
     --color-text: #666;
@@ -21,40 +22,40 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
-    user-select: none;/*禁止用户鼠标在页面上选中文字和图片*/
-    -webkit-tap-highlight-color: transparent;
-    background: var(--color-background);
-    color: var(--color-text);
-    width: 100vw;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none;/*禁止用户鼠标在页面上选中文字和图片*/
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
 }
 
 a {
-    color: var(--color-text);
-    text-decoration: none;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 .clear-fix::after{
-    clear: both;
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    visibility: hidden;
+  clear: both;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
 }
 
 .clear-fix {
-    zoom: 1;
+  zoom: 1;
 }
 
 .left {
-    float: left;
+  float: left;
 }
 
 .right {

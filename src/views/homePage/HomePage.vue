@@ -13,19 +13,23 @@
     <nav-bar><div slot="center">购物车</div></nav-bar>
     <!-- 轮播图 -->
     <home-swiper :banner="banner"></home-swiper>
-    <!-- p157开始 -->
+    <!-- 推荐组件 -->
+    <home-recommend :recommend="recommend"></home-recommend>
+    <!-- p159 -->
   </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navBar/NavBar.vue'
 import HomeSwiper from './homePageChild/HomeSwiper.vue'
-
+import HomeRecommend from './homePageChild/HomeRecommend.vue'
 import { getHomeMultidata } from 'network/homePage/HttpHomePage'
+
 export default {
   components: {
     NavBar,
-    HomeSwiper
+    HomeSwiper,
+    HomeRecommend
   },
   name: 'HomePage',
   data() {

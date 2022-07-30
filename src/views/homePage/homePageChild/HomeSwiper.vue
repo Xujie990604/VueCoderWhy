@@ -1,3 +1,10 @@
+<!--
+ * @Author: xujie 1607526161@qq.com
+ * @Date: 2022-07-26 18:50:19
+ * @LastEditors: xujie 1607526161@qq.com
+ * @FilePath: \supermarket\src\views\homePage\homePageChild\HomeSwiper.vue
+ * @Description: 抽离的 el-carousel 组件
+-->
 <template>
   <div class="home-swiper">
     <el-carousel
@@ -48,7 +55,7 @@ export default {
   },
   methods: {
     /**
-     * @description: 轮播图切换时，将当前活图片的 name 传给父组件
+     * @description: 轮播图切换时，将当前活跃图片的 name 传给父组件
      * @param {*} now 目前活跃的轮播图图片
      * @param {*} old 上次活跃的轮播图图片
      * @return { undefined }

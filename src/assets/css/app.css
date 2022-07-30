@@ -1,0 +1,9 @@
+/* 使DOM元素垂直居中 */
+.middle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
