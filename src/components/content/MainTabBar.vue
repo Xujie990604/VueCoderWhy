@@ -2,9 +2,9 @@
 <!--
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-10 14:03:15
- * @LastEditors: x09898 coder_xujie@163.com
- * @LastEditTime: 2022-07-15 11:44:26
- * @FilePath: \VueCoderWhy\src\components\content\MainTabBar.vue
+ * @LastEditors: xujie 1607526161@qq.com
+ * @LastEditTime: 2022-07-30 15:23:06
+ * @FilePath: \supermarket\src\components\content\MainTabBar.vue
  * @Description: 底部的导航栏组件
 -->
 <template>
@@ -50,6 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 .el-tabs {
+  background-color: #fff;
   ::v-deep.el-tabs__header {
     margin: 0;
     .el-tabs__nav {

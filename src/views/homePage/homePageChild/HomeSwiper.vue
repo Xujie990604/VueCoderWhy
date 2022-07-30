@@ -73,8 +73,12 @@ export default {
   // 因为item使用的absolute定位，所以container不会被item撑起来
   // 图片和尺寸随着视口的宽度变化，所以给container一个根据视口宽度变化的高度
   // 52这个数值来源于 图片长度/图片高度
+  // 因为 el-carousel__container 中有一个按钮的 z-index 为10 在滚动过程中会遮挡导航栏
+  // 所以直接在 el-carousel__container 设置为2 小于导航栏的 3
+  // 这样整个 el-carousel__container 都不会在层级上高于 导航栏，即使内部按钮的 层级为 10，但这也是在 el-carousel__container 中和同级别的兄弟们去比，无法直接和伯伯元素去比
   ::v-deep.el-carousel__container {
     height: 52vw;
+    z-index: 2;
     .el-carousel__arrow {
       top: 26vw;
     }

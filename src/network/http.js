@@ -2,7 +2,7 @@
  * @Author: xujie 1607526161@qq.com
  * @Date: 2022-07-12 21:08:50
  * @LastEditors: xujie 1607526161@qq.com
- * @LastEditTime: 2022-07-21 21:49:13
+ * @LastEditTime: 2022-07-30 18:34:58
  * @FilePath: \supermarket\src\network\http.js
  * @Description: 封装axios的文件
  */
