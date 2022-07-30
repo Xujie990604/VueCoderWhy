@@ -16,6 +16,7 @@
     <!-- 推荐组件 -->
     <home-recommend :recommend="recommend"></home-recommend>
     <!-- p159 -->
+    git b
   </div>
 </template>
 
