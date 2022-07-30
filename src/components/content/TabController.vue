@@ -40,8 +40,13 @@ export default {
     }
   },
   methods: {
+    /**
+     * @description: tab 标签被点击时触发事件
+     * @param { VueComponent } tab 被选中的 tab标签实例
+     * @return { undefined }
+     */
     handleClick(tab) {
-      console.log(tab.name)
+      this.$emit('tab-click', tab.name)
     }
   }
 }
@@ -56,12 +61,15 @@ export default {
   .el-tabs {
     // 修改组件内部使用float布局的方式
     // 改用flex进行布局
-    ::v-deep.el-tabs__nav {
-      display: flex;
-      float: none;
-      .el-tabs__item {
-        flex: 1;
-        text-align: center;
+    ::v-deep.el-tabs__header {
+      margin-bottom: 0;
+      .el-tabs__nav {
+        display: flex;
+        float: none;
+        .el-tabs__item {
+          flex: 1;
+          text-align: center;
+        }
       }
     }
   }

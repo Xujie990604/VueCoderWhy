@@ -18,116 +18,21 @@
     <!-- 本周推荐 -->
     <home-feature></home-feature>
     <!-- tab 组件 -->
-    <tab-controller :tabs="tabs" default="0"></tab-controller>
-    <ul>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-      <li>name</li>
-    </ul>
+    <tab-controller
+      :tabs="tabs" default="0"
+      @tab-click="tabClick">
+    </tab-controller>
+    <!-- 商品展示组件 -->
+    <good-list :goods="showGoods"></good-list>
+    <!-- p165开始 -->
   </div>
 </template>
 
 <script>
 // 公共组件
 import NavBar from 'components/common/navBar/NavBar.vue'
-import TabController from '../../components/content/TabController.vue'
+import TabController from 'components/content/TabController.vue'
+import GoodList from 'components/content/goods/GoodList.vue'
 // 子组件
 import HomeSwiper from './homePageChild/HomeSwiper.vue'
 import HomeRecommend from './homePageChild/HomeRecommend.vue'
@@ -139,6 +44,7 @@ export default {
   components: {
     NavBar,
     TabController,
+    GoodList,
     HomeSwiper,
     HomeRecommend,
     HomeFeature
@@ -166,31 +72,76 @@ export default {
         pop: { page: 0, list: [] },
         new: { page: 0, list: [] },
         sell: { page: 0, list: [] }
-      }
+      },
+      currentType: 'pop' // 当前展示商品的类型
+    }
+  },
+  computed: {
+    // 要传进商品组件中进行展示的数据
+    showGoods() {
+      return this.goods[this.currentType].list
     }
   },
   created() {
-    // 1.获取页面的所有数据
-    getHomeMultidata()
-      .then(res => {
-        console.log('Home页面请求到的所有数据', res.data)
-        this.banner = res.data.banner.list
-        this.recommend = res.data.recommend.list
-      })
-      .catch(err => console.log(err))
-    // 2. 获取页面中的商品数据
-    // p162 05：55
-    getHomeGoods('pop', 1)
-      .then(res => {
-        this.$utils.showMessage(res.returnCode)
-      })
-      .catch(err => {
-        // 错误不是由服务端返回的，是由浏览器或者 Vue 抛出的
-        // 所以错误里面没有 错误码 ，消息提示时一律为未知错误
-        this.$utils.showMessage(err.returnCode)
-      })
+    this.getHomeMultidata()
+    this.getHomeGoods('new', 1)
+    this.getHomeGoods('pop', 1)
+    this.getHomeGoods('sell', 1)
   },
   methods: {
+    /**
+     * @description: 获取页面需要的多条数据
+     * @return { undefined }
+     */
+    getHomeMultidata() {
+      getHomeMultidata()
+        .then(res => {
+          console.log('Home页面请求到的所有数据', res.data)
+          this.banner = res.data.banner.list
+          this.recommend = res.data.recommend.list
+        })
+        .catch(err => console.log(err))
+    /**
+     * @description: 获取页面中的商品数据
+     * @params { String } 获取商品的类型
+     * @params { Number } 获取商品的页码
+     * @return { undefined }
+     */
+    },
+    getHomeGoods(type) {
+      const page = this.goods[type].page + 1
+      getHomeGoods(type, page)
+        .then(res => {
+          this.$utils.showMessage(res.returnCode)
+          this.goods[type].list.push(...res.data.list)
+          this.goods[type].page++
+          console.log(this.goods)
+        })
+        .catch(err => {
+          console.log(err)
+          // 错误不是由服务端返回的，是由浏览器或者 Vue 抛出的
+          // 所以错误里面没有 错误码 ，消息提示时一律为未知错误
+          this.$utils.showMessage(err.returnCode)
+        })
+    },
+    /**
+     * @description: 点击 tab 时进行商品信息的切换
+     * @param { String } index 商品种类的索引值
+     * @return { undefined }
+     */
+    tabClick(index) {
+      switch (index) {
+        case '0':
+          this.currentType = 'pop'
+          break
+        case '1':
+          this.currentType = 'new'
+          break
+        case '2':
+          this.currentType = 'sell'
+          break
+      }
+    }
   }
 }
 </script>
@@ -209,6 +160,10 @@ export default {
     left: 0;
     width: 100%;
     z-index: 3;
+  }
+  // 为了 tab 在滚动时不被商品列表遮挡
+  .tab-controller {
+    z-index: 1;
   }
 }
 
